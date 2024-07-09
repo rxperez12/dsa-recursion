@@ -18,9 +18,9 @@ function longest(words: LLNodeStr | null): number {
   if (words === null) return 0;
 
   const currentValLength = words.val.length
-  const currentHighest = longest(words.next)
+  const maxLength = longest(words.next)
 
-  return (currentValLength > currentHighest)? currentValLength : currentHighest
+  return (currentValLength > maxLength)? currentValLength : maxLength
 }
 
 export { longest };
