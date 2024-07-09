@@ -15,16 +15,12 @@ function longest(words: LLNodeStr | null): number {
    * can we update a counter in the function scope??
    */
 
-  let longestLength = 0
-
   if (words === null) return 0;
-  if (words.next === null) return 0;
 
   const currentValLength = words.val.length
+  const currentHighest = longest(words.next)
 
-
-
-  return 42;
+  return (currentValLength > currentHighest)? currentValLength : currentHighest
 }
 
 export { longest };
